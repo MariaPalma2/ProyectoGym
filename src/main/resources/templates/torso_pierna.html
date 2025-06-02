@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+              color: black;
+              font-family: Arial, sans-serif;
+          }
+          .content {
+              padding: 20px;
+              text-align: center;
+          }
+          .header-title {
+              font-size: 2rem;
+              margin-bottom: 15px;
+              color: #00BFAE; /* Verde Agua */
+          }
+  
+          .table-container {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              overflow-x: auto; /* Para manejar la visualización en pantallas pequeñas */
+          }
+  
+          table {
+              width: auto;
+              margin-top: 20px;
+              border-collapse: collapse;
+              table-layout: fixed; /* Ajuste el ancho de las celdas */
+          }
+          table th, table td {
+              padding: 5px 10px; /* Menor padding */
+              text-align: center;
+              border: 1px solid #ddd;
+              font-size: 0.9rem; /* Reducir tamaño de texto */
+              vertical-align: middle; /* Centrado vertical */
+          }
+          table th {
+              background-color: #00BFAE;
+              color: white;
+          }
+          table td img {
+              width: 150px; /* Mantener tamaño de las imágenes */
+              height: auto;
+              border-radius: 10px;
+          }
+          .exercise-title {
+              color: #00BFAE;
+              font-size: 0.9rem;
+          }
+  
+  
+        h1{
+            color: #00BFAE; /* Verde Agua */
+          }
+  
+    </style>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-verde-agua w-100">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand px-4" href="#">
+            <img src="/imagenes/2.png" alt="GymApp" class="img-fluid" width="200px" height="200px">
+          </a>
+
+          <!-- Elementos del Menú -->
+          <div class="d-flex ms-auto align-items-center">
+            <a class="nav-link text-white lead fs-4 me-5" href="/sobreNosotros">Sobre nosotros</a>
+            <a class="nav-link text-white lead fs-4 me-5" href="/entrenamientos">Entrenamientos</a>
+            <a class="nav-link text-white lead fs-4 me-5" href="#" data-bs-toggle="modal" data-bs-target="#contactanosModal">Contáctanos</a>
+          </div>
+
+          <!-- Buscador -->
+          <form class="d-flex me-auto" style="margin-left: 60px;" role="search">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
+            <button class="btn btn-dark text-white" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Modal Contáctanos -->
+    <div class="modal fade" id="contactanosModal" tabindex="-1" aria-labelledby="contactanosModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactanosModalLabel">Contáctanos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+
+             <!-- Mensaje de Confirmación -->
+             <div id="successMessage" class="alert alert-success d-none" role="alert">
+              ¡Gracias! Tu mensaje ha sido enviado correctamente.
+            </div>
+              <button type="submit" class="btn btn-secondary">Enviar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--contenido-->
+    <div class="content">
+        <h1 class="header-title">Entrenamiento Torso-Pierna</h1>
+        <p>Una rutina dividida que permite trabajar con mayor volumen el tren superior e inferior, ideal para ganar fuerza, masa muscular y resistencia.</p>
+      
+        <h2>Instrucciones Iniciales</h2>
+        <p><strong>Duración:</strong> 45-60 minutos por sesión</p>
+        <p><strong>Frecuencia:</strong> 4 veces por semana (alternando días)</p>
+        <p><strong>Nivel de dificultad:</strong> Intermedio</p>
+        <p><strong>Calentamiento recomendado:</strong> 10-15 minutos de cardio ligero y movilidad articular</p>
+      
+        <!-- DÍA 1 -->
+        <h1 class="mt-4">Torso</h1>
+        <div class="table-container"> 
+          <table>
+            <thead>
+              <tr>
+                <th>Ejercicio</th>
+                <th>Imagen</th>
+                <th>Series</th>
+                <th>Repeticiones</th>
+                <th>Descanso</th>
+                <th>Músculos principales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="exercise-title">Press de banca</td>
+                <td><img src="/imagenes/press-banca.jpg" alt="Press de banca"></td>
+                <td>4</td>
+                <td>8-10</td>
+                <td>90 segundos</td>
+                <td>Pecho, tríceps, deltoides</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Remo con barra</td>
+                <td><img src="/imagenes/remo-barra.png" alt="Remo con barra"></td>
+                <td>4</td>
+                <td>10-12</td>
+                <td>90 segundos</td>
+                <td>Espalda, bíceps</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Dominadas</td>
+                <td><img src="/imagenes/dominadas.png" alt="Dominadas"></td>
+                <td>3</td>
+                <td>6-10</td>
+                <td>90 segundos</td>
+                <td>Dorsales, bíceps</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Fondos en paralelas</td>
+                <td><img src="/imagenes/fondos.jpg" alt="Fondos en paralelas"></td>
+                <td>3</td>
+                <td>10-12</td>
+                <td>60 segundos</td>
+                <td>Pecho, tríceps</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Press militar con mancuernas</td>
+                <td><img src="/imagenes/press-militar.jpg" alt="Press militar"></td>
+                <td>3</td>
+                <td>10</td>
+                <td>60-90 segundos</td>
+                <td>Hombros, tríceps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      
+        <!-- DÍA 2 -->
+        <h1 class="mt-4">Pierna</h1>
+        <div class="table-container"> 
+          <table>
+            <thead>
+              <tr>
+                <th>Ejercicio</th>
+                <th>Imagen</th>
+                <th>Series</th>
+                <th>Repeticiones</th>
+                <th>Descanso</th>
+                <th>Músculos principales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="exercise-title">Sentadilla con barra</td>
+                <td><img src="/imagenes/sentadillas_barra.jpg" alt="Sentadilla con barra"></td>
+                <td>4</td>
+                <td>8-10</td>
+                <td>90-120 segundos</td>
+                <td>Cuádriceps, glúteos, core</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Peso muerto rumano</td>
+                <td><img src="/imagenes/peso-muerto-rumano.jpg" alt="Peso muerto rumano"></td>
+                <td>4</td>
+                <td>10-12</td>
+                <td>90 segundos</td>
+                <td>Isquiotibiales, glúteos</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Zancadas con mancuernas</td>
+                <td><img src="/imagenes/zancadas-mancuerna.jpg" alt="Zancadas con mancuernas"></td>
+                <td>3</td>
+                <td>12 por pierna</td>
+                <td>60 segundos</td>
+                <td>Piernas, glúteos</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Elevación de talones</td>
+                <td><img src="/imagenes/elevacion-talones.jpg" alt="Elevación de talones"></td>
+                <td>3</td>
+                <td>15-20</td>
+                <td>45 segundos</td>
+                <td>Gemelos</td>
+              </tr>
+              <tr>
+                <td class="exercise-title">Crunch abdominal</td>
+                <td><img src="/imagenes/abdominales.jpg" alt="Crunch abdominal"></td>
+                <td>3</td>
+                <td>20</td>
+                <td>45 segundos</td>
+                <td>Abdominales</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      
+        <h2 class="mt-4">Consejos de Recuperación</h2>
+        <ul>
+          <li><strong>Estiramiento post entrenamiento:</strong> mínimo 10 minutos centrado en la zona trabajada.</li>
+          <li><strong>Días de descanso:</strong> Alterna días de torso y pierna, descansando al menos 1-2 días por semana.</li>
+        </ul>
+      
+        <h2>Motivación</h2>
+        <p>"Divide y vencerás: con constancia y disciplina, todo progreso llega."</p>
+      </div>
+ >
+       <!-- Footer -->
+     <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4 mb-3">
+              <h5>Enlaces Rápidos</h5>
+              <ul class="list-unstyled">
+                <li><a href="/sobreNosotros" class="text-white">Sobre Nosotros</a></li>
+                <li><a href="/entrenamientos" class="text-white">Entrenamientos</a></li>
+                <li><a href="#" class="text-white">Contáctanos</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5 class="text-center">Redes Sociales</h5> 
+              <ul class="list-unstyled text-center">
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/facebook.svg" alt="Facebook" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Facebook
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Instagram
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/twitter.svg" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5 class="text-center">Contacto</h5> 
+              <ul class="list-unstyled text-center">
+                <li class="mb-2">
+                  <a href="mailto:contacto@mtrain.com" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/email.svg" alt="Correo Electrónico" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Correo: contacto@mtrain.com
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="tel:+123456789" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/telefono.png" alt="Teléfono" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Teléfono: +123 456 789
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p>&copy; 2025 M-Train. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        // Función para mostrar mensaje de éxito al enviar el formulario
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evitar recarga de la página al enviar el formulario
+          document.getElementById('successMessage').classList.remove('d-none'); // Mostrar mensaje de éxito
+          document.getElementById('contactForm').reset(); // Limpiar el formulario
+  
+          // Ocultar mensaje después de 5 segundos
+          setTimeout(function() {
+            document.getElementById('successMessage').classList.add('d-none');
+          }, 5000); // El mensaje se oculta después de 5 segundos
+        });
+      </script>
+  
+      <!-- Incluye los scripts de Bootstrap -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>

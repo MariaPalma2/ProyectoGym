@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-verde-agua w-100">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand px-4" href="#">
+            <img src="/imagenes/2.png" alt="GymApp" class="img-fluid" width="200px" height="200px">
+          </a>
+
+          <!-- Elementos del Menú -->
+          <div class="d-flex ms-auto align-items-center">
+            <a class="nav-link text-white lead fs-4 me-5" href="/sobreNosotros">Sobre nosotros</a>
+            <a class="nav-link text-white lead fs-4 me-5" href="/entrenamientos">Entrenamientos</a>
+            <a class="nav-link text-white lead fs-4 me-5" href="#" data-bs-toggle="modal" data-bs-target="#contactanosModal">Contáctanos</a>
+          </div>
+
+          <!-- Buscador -->
+          <form class="d-flex me-auto" style="margin-left: 60px;" role="search">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Buscar">
+            <button class="btn btn-dark text-white" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Modal Contáctanos -->
+    <div class="modal fade" id="contactanosModal" tabindex="-1" aria-labelledby="contactanosModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactanosModalLabel">Contáctanos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+
+             <!-- Mensaje de Confirmación -->
+             <div id="successMessage" class="alert alert-success d-none" role="alert">
+              ¡Gracias! Tu mensaje ha sido enviado correctamente.
+            </div>
+              <button type="submit" class="btn btn-secondary">Enviar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 text-center">
+        <h1 class="mb-4">Plan de Dieta: Ganar Masa Muscular</h1>
+        <p class="mb-4">Este plan está diseñado para ayudarte a aumentar masa muscular de forma saludable. Incluye comidas ricas en proteínas, carbohidratos complejos y grasas buenas.</p>
+        
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Día</th>
+                <th><i class="fas fa-mug-hot"></i> Desayuno</th>
+                <th><i class="fas fa-utensils"></i> Almuerzo</th>
+                <th><i class="fas fa-apple-alt"></i> Merienda</th>
+                <th><i class="fas fa-pizza-slice"></i> Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td>Tortilla de 4 claras y 2 huevos + avena con plátano</td>
+                <td>Arroz integral + pechuga de pollo + verduras salteadas</td>
+                <td>Yogur griego + puñado de nueces</td>
+                <td>Pasta integral + atún + ensalada de espinacas</td>
+              </tr>
+              <tr>
+                <td>Martes</td>
+                <td>Batido de proteína + tostadas integrales con aguacate</td>
+                <td>Lentejas con arroz + huevo cocido + ensalada</td>
+                <td>Sandwich integral con pechuga de pavo y queso fresco</td>
+                <td>Quinoa + salmón al horno + verduras al vapor</td>
+              </tr>
+              <tr>
+                <td>Miércoles</td>
+                <td>Avena cocida en leche + frutas + frutos secos</td>
+                <td>Arroz con ternera + ensalada variada</td>
+                <td>Batido de plátano, avena y proteína</td>
+                <td>Pollo al curry + arroz basmati + verduras</td>
+              </tr>
+              <tr>
+                <td>Jueves</td>
+                <td>Pan integral con queso fresco + batido de frutas</td>
+                <td>Macarrones integrales + pechuga de pollo a la plancha</td>
+                <td>Tortitas de avena + miel + yogur</td>
+                <td>Pizza casera integral con pollo, queso y verduras</td>
+              </tr>
+              <tr>
+                <td>Viernes</td>
+                <td>Tortilla + tostadas integrales con crema de cacahuete</td>
+                <td>Arroz integral + salmón + aguacate</td>
+                <td>Batido de proteína + plátano</td>
+                <td>Burger casera de ternera magra + patata asada</td>
+              </tr>
+              <tr>
+                <td>Sábado</td>
+                <td>Porridge de avena + frutos rojos + leche vegetal</td>
+                <td>Pollo al horno + boniato + ensalada</td>
+                <td>Fruta + barrita proteica</td>
+                <td>Pasta integral + albóndigas caseras + verduras</td>
+              </tr>
+              <tr>
+                <td>Domingo (Libre)</td>
+                <td colspan="4">Día libre: come lo que te apetezca con moderación 🍕🍰🍔</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4 mb-3">
+              <h5>Enlaces Rápidos</h5>
+              <ul class="list-unstyled">
+                <li><a href="/sobreNosotros" class="text-white">Sobre Nosotros</a></li>
+                <li><a href="/entrenamientos" class="text-white">Entrenamientos</a></li>
+                <li><a href="#" class="text-white">Contáctanos</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5 class="text-center">Redes Sociales</h5> 
+              <ul class="list-unstyled text-center">
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/facebook.svg" alt="Facebook" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Facebook
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Instagram
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/twitter.svg" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5 class="text-center">Contacto</h5> 
+              <ul class="list-unstyled text-center">
+                <li class="mb-2">
+                  <a href="mailto:contacto@mtrain.com" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/email.svg" alt="Correo Electrónico" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Correo: contacto@mtrain.com
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="tel:+123456789" class="text-white d-flex justify-content-center align-items-center">
+                    <img src="/imagenes/telefono.png" alt="Teléfono" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Teléfono: +123 456 789
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p>&copy; 2025 M-Train. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        // Función para mostrar mensaje de éxito al enviar el formulario
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evitar recarga de la página al enviar el formulario
+          document.getElementById('successMessage').classList.remove('d-none'); // Mostrar mensaje de éxito
+          document.getElementById('contactForm').reset(); // Limpiar el formulario
+  
+          // Ocultar mensaje después de 5 segundos
+          setTimeout(function() {
+            document.getElementById('successMessage').classList.add('d-none');
+          }, 5000); // El mensaje se oculta después de 5 segundos
+        });
+      </script>
+  
+      <!-- Incluye los scripts de Bootstrap -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  

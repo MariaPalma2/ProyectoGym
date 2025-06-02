@@ -1,0 +1,186 @@
+
+/* Eliminar márgenes y rellenos del body y html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* Asegurarse de que el footer quede pegado al fondo */
+  footer {
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+/* Fondo verde agua */
+.bg-verde-agua {
+    background: linear-gradient(to bottom, #A7FFEB, #61D7C7);
+}
+
+/* Animación de latido para el texto */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal del texto */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño del texto en un 20% */
+    }
+}
+
+/* Aplicar la animación de latido a las letras */
+.animated-text {
+    animation: heartbeat 1.5s ease-in-out infinite; /* La animación se repite infinitamente */
+}
+
+/* Aumentar el tamaño del texto */
+.fs-1 {
+    font-size: 5rem;
+}
+
+.fs-2 {
+    font-size: 4rem;
+}
+
+.fs-3 {
+    font-size: 3rem;
+}
+
+/* Posición fija en la parte superior izquierda de la pantalla */
+.position-absolute {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+    top: 30px;   /* Ajusta la posición desde la parte superior */
+    left: 80px;  /* Ajusta la posición desde el lado izquierdo */
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto para mejor visibilidad */
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Personalización del borde y el fondo de los botones */
+.btn-outline-verde-agua {
+    border: 2px solid #A7FFEB;  /* Borde verde agua */
+    background-color: transparent; /* Fondo transparente */
+    color: #A7FFEB; /* Texto verde agua */
+}
+
+/* Cambia el color del texto y el borde cuando pasas el ratón */
+.btn-outline-verde-agua:hover {
+    background-color: #A7FFEB; /* Fondo verde agua al pasar el ratón */
+    color: black; /* Texto blanco cuando se hace hover */
+}
+
+/* Estilos personalizados para el modal */
+.custom-modal {
+    background: linear-gradient(135deg, #A7FFEB, #61D7C7);
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+h2{
+    color: #A7FFEB;
+}
+
+.entrenamiento h2 {
+    color: #61D7C7; /* Verde agua */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+
+  .entrenamiento p {
+    color: #6c757d; /* Gris para el texto */
+    font-family: 'Arial', sans-serif;
+  }
+
+/* Establecer la misma altura para todas las tarjetas */
+.card {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+
+.card img {
+    object-fit: cover;
+     height: 200px;
+}
+
+/* Estilo para los logos del footer */
+.social-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+ /* Asegurar que las imágenes dentro de las tarjetas no se corten ni distorsionen */
+.card-img-top {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 200px; /* Altura fija para que las imágenes sean del mismo tamaño */
+    object-fit: cover; /* Mantener las proporciones de la imagen */
+    object-position: center; /* Centra la imagen en caso de que no ocupe todo el espacio */
+}
+
+/* Estructura general de la tarjeta */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Cuerpo de la tarjeta que contiene el texto */
+.card-body {
+    flex-grow: 1;
+}
+
+/* Ajustes para que el texto en las tarjetas se vea bien */
+.card-title {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-verde-agua {
+    background-color: #20c997; /* Color verde agua */
+    color: white;
+    border: 2px solid #20c997; /* Borde del mismo color que el fondo */
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-verde-agua:hover {
+    background-color: #1aa179; /* Un tono más oscuro */
+    border-color: #1aa179; /* Mantiene el borde visible */
+}
+
+
+
